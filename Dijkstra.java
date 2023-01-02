@@ -16,6 +16,9 @@ public class Dijkstra extends FindAlgorithm {
         double min = -1;
         Vertex min_node = start;
 
+        // Get our nodes neighbours
+        getNeighbours(min_node);
+
         // If it's our first run set up our starting node
         if (first_run) {
             start_node = start;

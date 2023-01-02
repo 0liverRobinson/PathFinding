@@ -31,6 +31,7 @@ public class Application implements MouseInputListener, Runnable {
     private String not_found = "Can't Find Route";
     private JComboBox algorithm_picker, distance_picker;
 
+    private Color unchecked = new Color(143,190,240), checkedCol = new Color(155,204,255),  pathCol = new Color(108,54,54);
     public Application() {
 
         // Create new window
@@ -160,13 +161,13 @@ public class Application implements MouseInputListener, Runnable {
                             break;
 
                         case "Checked":
-                            g.setColor(Color.CYAN);
+                            g.setColor(checkedCol);
                             g.fillRect(x * tile_length, y * tile_length, tile_length, tile_length);
                             g.setColor(Color.BLACK);
                             break;
 
                         case "Neighbour":
-                            g.setColor(Color.GRAY);
+                            g.setColor(unchecked);
                             g.fillRect(x * tile_length, y * tile_length, tile_length, tile_length);
                             g.setColor(Color.BLACK);
                             break;
@@ -178,7 +179,7 @@ public class Application implements MouseInputListener, Runnable {
                             break;
 
                         case "PathNode":
-                            g.setColor(Color.BLUE);
+                            g.setColor(pathCol);
                             g.fillRect(x * tile_length, y * tile_length, tile_length, tile_length);
                             g.setColor(Color.BLACK);
                             break;
